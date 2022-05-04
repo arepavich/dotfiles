@@ -1,5 +1,11 @@
 let mapleader="\<Space>"
 
+" ---------- Native binds ----------
+" Close buffer but retain window
+nmap <silent> ZB :bnext\|bd#<CR>
+" Cycle buffers
+nmap gt :bn<CR>
+nmap gT :bp<CR>
 " Easier navigation between panes
 map <C-j> <C-W>j
 map <C-k> <C-W>k
