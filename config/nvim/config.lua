@@ -26,6 +26,23 @@ require('nvim-treesitter.configs').setup {
 	},
 }
 
+require'nvim-web-devicons'.setup {
+ -- your personnal icons can go here (to override)
+ -- you can specify color or cterm_color instead of specifying both of them
+ -- DevIcon will be appended to `name`
+ override = {
+  zsh = {
+    icon = "",
+    color = "#428850",
+    cterm_color = "65",
+    name = "Zsh"
+  }
+ };
+ -- globally enable default icons (default to false)
+ -- will get overriden by `get_icons` option
+ default = true;
+}
+
 require('nvim-gps').setup({disable_icons = true})
 local gps = require('nvim-gps')
 
@@ -40,6 +57,15 @@ table.insert(components.active, {})
 table.insert(components.active, {})
 
 table.insert(components.active[1], {
+	provider = 'feline-file_info'
+})
+table.insert(components.active[1], {
+	provider = 'file_size'
+})
+table.insert(components.active[1], {
+	provider = 'feline-position'
+})
+table.insert(components.active[1], {
 	name = 'gps',
 	provider = function()
 		return gps.get_location()
@@ -49,6 +75,6 @@ table.insert(components.active[1], {
 	end
 })
 require('feline').setup({
-	preset = 'noicon',
 	components = components
 })
+

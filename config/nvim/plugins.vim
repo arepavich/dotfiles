@@ -10,6 +10,7 @@ Plug 'scrooloose/nerdtree'
 " Airline themes
 "Plug 'vim-airline/vim-airline-themes'
 Plug 'feline-nvim/feline.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
 " Vim-Plug
 Plug 'Mofiqul/dracula.nvim'
 " Better syntax-highlighting for filetypes in vim
