@@ -47,6 +47,26 @@ require('nvim-gps').setup({disable_icons = true})
 local gps = require('nvim-gps')
 
 
+local vi_mode_utils = require('feline.providers.vi_mode')
+local vi_mode_text = {
+  NORMAL = '<|',
+  OP = '<|',
+  INSERT = '|>',
+  VISUAL = '<>',
+  LINES = '<>',
+  BLOCK = '<>',
+  REPLACE = '<>',
+  ['V-REPLACE'] = '<>',
+  ENTER = '<>',
+  MORE = '<>',
+  SELECT = '<>',
+  COMMAND = '<|',
+  SHELL = '<|',
+  TERM = '<|',
+  NONE = '<>',
+  CONFIRM = '|>'
+}
+
 local components = {
 	active = {},
 	inactive = {},
@@ -57,13 +77,30 @@ table.insert(components.active, {})
 table.insert(components.active, {})
 
 table.insert(components.active[1], {
-	provider = 'feline-file_info'
+	provider = function()
+		return vi_mode_text[vi_mode_utils.get_vim_mode()]
+	end,
+	hl = function()
+		local val = {}
+		val.bg = vi_mode_utils.get_mode_color()
+		val.fg = 'black'
+		val.style = 'bold'
+
+		return val
+	end,
+	right_sep =  ' ' 
 })
 table.insert(components.active[1], {
-	provider = 'file_size'
+	provider = 'file_info',
+	right_sep = ' '
 })
 table.insert(components.active[1], {
-	provider = 'feline-position'
+	provider = 'file_size',
+	right_sep = ' '
+})
+table.insert(components.active[1], {
+	provider = 'position',
+	right_sep = ' '
 })
 table.insert(components.active[1], {
 	name = 'gps',
@@ -72,7 +109,8 @@ table.insert(components.active[1], {
 	end,
 	enabled = function()
 		return gps.is_available()
-	end
+	end,
+	right_sep = ' '
 })
 require('feline').setup({
 	components = components
