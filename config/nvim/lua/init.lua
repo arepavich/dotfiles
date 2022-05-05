@@ -1,4 +1,5 @@
-require('plugins.init')
+require('keybinds')
+require('plugins')
 
 vim.cmd('filetype plugin indent on')
 vim.opt.termguicolors = true

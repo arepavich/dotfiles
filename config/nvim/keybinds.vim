@@ -1,16 +1,15 @@
-let mapleader="\<Space>"
 
 " ---------- Native binds ----------
 " Close buffer but retain window
-nmap <silent> ZB :bnext\|bd#<CR>
+"map <silent> ZB :bnext\|bd#<CR>
 " Cycle buffers
-nmap gt :bn<CR>
-nmap gT :bp<CR>
+"nmap gt :bn<CR>
+"nmap gT :bp<CR>
 " Easier navigation between panes
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+"map <C-j> <C-W>j
+"map <C-k> <C-W>k
+"map <C-h> <C-W>h
+"map <C-l> <C-W>l
 
 " ---------- Coc binds ----------
 " Code action on <leader>a
