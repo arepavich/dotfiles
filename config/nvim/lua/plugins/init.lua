@@ -4,6 +4,9 @@ Plug.begin('~/.config/nvim/plugged')
 
 Plug('neoclide/coc.nvim', {branch='release'})
 Plug 'sainnhe/edge'
+Plug 'EdenEast/nightfox.nvim'
+--Plug('catppuccin/nvim', {as='catppuccin'})
+Plug('amirali/catppuccin.nvim', {as='catppuccin'})
 Plug 'feline-nvim/feline.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'nvim-treesitter/nvim-treesitter'
@@ -24,6 +27,8 @@ Plug 'nvim-neo-tree/neo-tree.nvim'
 Plug.ends()
 
 
+
+
 require('nvim-autopairs').setup{}
 require('plugins.nvim-cmp')
 vim.g.neo_tree_remove_legacy_commands = 1
@@ -32,3 +37,4 @@ require('neo-tree').setup({
 		position = 'left'
 	}
 })
+require('plugins.feline')
