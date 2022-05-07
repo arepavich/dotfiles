@@ -5,8 +5,7 @@ Plug.begin('~/.config/nvim/plugged')
 Plug('neoclide/coc.nvim', {branch='release'})
 Plug 'sainnhe/edge'
 Plug 'EdenEast/nightfox.nvim'
---Plug('catppuccin/nvim', {as='catppuccin'})
-Plug('amirali/catppuccin.nvim', {as='catppuccin'})
+Plug('catppuccin/nvim', {as='catppuccin'})
 Plug 'feline-nvim/feline.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'nvim-treesitter/nvim-treesitter'

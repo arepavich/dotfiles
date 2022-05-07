@@ -17,7 +17,7 @@ styles = {
 	variables = "NONE",
 },
 integrations = {
-	treesitter = false,
+	treesitter = true,
 	native_lsp = {
 		enabled = true,
 		virtual_text = {
