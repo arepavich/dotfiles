@@ -1,7 +1,8 @@
 local feline = require('feline')
-feline.add_theme(require("catppuccin.core.color_palette"))
+local cp_api = require('catppuccin.api.colors')
+local colors = cp_api.get_colors()
 
-require('nvim-gps').setup({disable_icons = true})
+require('nvim-gps').setup()
 local gps = require('nvim-gps')
 
 local vi_mode_utils = require('feline.providers.vi_mode')
@@ -54,11 +55,19 @@ table.insert(components.active[1], {
 
 table.insert(components.active[1], {
 	provider = 'file_info',
-	left_sep = { str = ' ', hl={bg='blue', fg='bg'}},
+	left_sep = {
+			str = ' ',
+			hl={
+				bg=colors.peach,
+				fg='bg',
+				style='bold'
+			}
+	},
+
 	right_sep = ' ',
 	hl = {
-		fg = 'fg',
-		bg = 'blue',
+		fg = colors.black4,
+		bg = colors.peach,
 		style = 'bold'
 	}
 })
@@ -74,9 +83,22 @@ table.insert(components.active[1], {
 	enabled = function()
 		return gps.is_available()
 	end,
-	right_sep = ' '
+	hl = {
+		fg = colors.black4,
+		bg = colors.blue,
+		style = 'bold'
+	},
+	left_sep = { 
+		str = ' ',
+		hl = {
+			bg = colors.blue,
+			fg = 'bg',
+			style = 'bold'
+		}
+	},
+	right_sep = ' ',
 })
 require('feline').setup({
-	components = require('catppuccin.core.integrations.feline')
-	--components = components
+	--components = require('catppuccin.core.integrations.feline')
+	components = components
 })
