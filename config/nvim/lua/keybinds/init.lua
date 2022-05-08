@@ -12,5 +12,6 @@ vim.keymap.set('n', '<C-l>', '<C-W>l')
 vim.keymap.set('n', '\\', '<cmd>Neotree reveal<CR>')
 
 require('keybinds.nvim-lsp')
+require('keybinds.telescope')
 
 vim.keymap.set('n', '<C-r>', '<cmd>lua reload_nvim_conf()<CR>')

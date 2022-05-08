@@ -6,5 +6,6 @@ vim.keymap.set('n', 'J', '<cmd>lua vim.lsp.buf.signature_help()<CR>', {silent=tr
 vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', {silent=true})
 
 vim.keymap.set('n', '<leader>a', '<cmd>lua vim.lsp.buf.code_action()<CR>', {silent=true})
+vim.keymap.set('v', '<leader>a', '<cmd>lua vim.lsp.buf.code_action()<CR>', {silent=true})
 vim.keymap.set('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', {silent=true})
 
