@@ -5,6 +5,7 @@ vim.opt.termguicolors = true
 require('keybinds')
 require('plugins.dependencies')
 
-require('colors.catppuccin')
+--require('colors.catppuccin')
+vim.cmd[[colorscheme kanagawa]]
 require('plugins')
 
