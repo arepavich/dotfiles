@@ -5,6 +5,8 @@ require('neo-tree').setup({
 		position = 'left'
 	}
 })
+require('window-picker').setup()
+
 require('gitsigns').setup()
 require('null-ls').setup({
 	sources = {
@@ -33,3 +35,4 @@ require('lualine').setup({
 })
 
 require('Comment').setup()
+require("indent_blankline").setup()

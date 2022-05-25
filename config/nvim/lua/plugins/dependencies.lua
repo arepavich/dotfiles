@@ -31,11 +31,15 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'MunifTanjim/nui.nvim'
 Plug 'nvim-neo-tree/neo-tree.nvim'
+Plug 's1n7ax/nvim-window-picker'
 
 Plug 'nvim-telescope/telescope.nvim'
 
 -- Commenting
 Plug 'numToStr/Comment.nvim'
+
+-- Indent visibility
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 Plug.ends()
 
