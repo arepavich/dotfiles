@@ -10,6 +10,8 @@ vim.keymap.set('n', '<C-h>', '<C-W>h')
 vim.keymap.set('n', '<C-l>', '<C-W>l')
 
 vim.keymap.set('n', '\\', '<cmd>Neotree reveal<CR>')
+vim.keymap.set('n', '<leader>fb', '<cmd>Neotree source=buffers position=float<CR>')
+vim.keymap.set('n', '<leader>fg', '<cmd>Neotree source=git_status position=left<CR>')
 
 require('keybinds.nvim-lsp')
 require('keybinds.telescope')
