@@ -41,5 +41,9 @@ Plug 'numToStr/Comment.nvim'
 -- Indent visibility
 Plug 'lukas-reineke/indent-blankline.nvim'
 
+-- Motion
+Plug 'ggandor/leap.nvim'
+Plug 'tpope/vim-repeat'
+
 Plug.ends()
 

@@ -36,3 +36,5 @@ require('lualine').setup({
 
 require('Comment').setup()
 require("indent_blankline").setup()
+
+require('leap').set_default_keymaps()
