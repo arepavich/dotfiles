@@ -1,6 +1,6 @@
 vim.g.mapleader=","
 
-vim.keymap.set('n', 'ZB', '<Cmd>bnext|bd#<CR>', {silent=true})
+vim.keymap.set('n', 'ZB', '<Cmd>bprev|bd#<CR>', {silent=true})
 vim.keymap.set('n', 'gt', '<Cmd>bn<CR>', {silent=true})
 vim.keymap.set('n', 'gT', '<Cmd>bp<CR>', {silent=true})
 

@@ -45,5 +45,8 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'ggandor/leap.nvim'
 Plug 'tpope/vim-repeat'
 
+-- Python Improvements
+Plug 'Vimjas/vim-python-pep8-indent'
+
 Plug.ends()
 
