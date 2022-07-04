@@ -25,6 +25,7 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'windwp/nvim-autopairs'
+Plug 'kylechui/nvim-surround'
 Plug 'lewis6991/gitsigns.nvim'
 
 -- Neo-tree and dependencies
@@ -47,6 +48,8 @@ Plug 'tpope/vim-repeat'
 
 -- Python Improvements
 Plug 'Vimjas/vim-python-pep8-indent'
+-- Debugging
+Plug 'mfussenegger/nvim-dap'
 
 Plug.ends()
 

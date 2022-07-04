@@ -9,4 +9,5 @@ require('plugins.dependencies')
 --require('colors.catppuccin')
 vim.cmd[[colorscheme kanagawa]]
 require('plugins')
+require('lsp')
 
