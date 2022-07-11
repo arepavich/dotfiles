@@ -15,5 +15,6 @@ vim.keymap.set('n', '<leader>fg', '<cmd>Neotree source=git_status position=left<
 
 require('keybinds.nvim-lsp')
 require('keybinds.telescope')
+-- require('keybinds.neotest')
 
 vim.keymap.set('n', '<leader><C-r>', '<cmd>lua reload_nvim_conf()<CR>')

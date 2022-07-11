@@ -51,5 +51,13 @@ Plug 'Vimjas/vim-python-pep8-indent'
 -- Debugging
 Plug 'mfussenegger/nvim-dap'
 
+--Testing
+Plug 'vim-test/vim-test'
+Plug 'antoinemadec/FixCursorHold.nvim'
+Plug 'nvim-neotest/neotest'
+-- Plug 'nvim-neotest/neotest-python'
+Plug '~/Developer/lua/neotest-python'
+Plug 'nvim-neotest/neotest-vim-test'
+
 Plug.ends()
 

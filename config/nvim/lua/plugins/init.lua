@@ -1,28 +1,14 @@
-require('nvim-autopairs').setup{}
-vim.g.neo_tree_remove_legacy_commands = 1
-require('neo-tree').setup({
-	window = {
-		position = 'left'
-	}
-})
-require('window-picker').setup()
+require("plugins.plugins")
 
-require('gitsigns').setup()
-require('null-ls').setup({
-	sources = {
-		require('null-ls').builtins.code_actions.gitsigns,
-	}
-})
-
-require('plugins.nvim-cmp')
-require('plugins.lualine')
-
-require('Comment').setup()
-require("indent_blankline").setup()
-
-require('leap').set_default_keymaps()
-require('nvim-surround').setup({
-	keymaps = {
-		visual = "as"
-	}
-})
+require("plugins.autopairs")
+require("plugins.treesitter")
+require("plugins.nvim-web-devicons")
+require("plugins.leap")
+require("plugins.neotree")
+require("plugins.gitsigns")
+require("plugins.null-ls")
+require("plugins.nvim-cmp")
+require("plugins.lualine")
+require("plugins.comment")
+require("plugins.indentline")
+require("plugins.surround")
