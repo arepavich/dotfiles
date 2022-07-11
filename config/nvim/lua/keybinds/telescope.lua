@@ -30,10 +30,10 @@ function grep_string(directories)
 	end
 end
 
-vim.keymap.set('n', 'fd', '<cmd>lua require("telescope.builtin").find_files()<CR>')
-vim.keymap.set('n', 'ff', grep_directory)
-vim.keymap.set('n', 'fs', grep_string)
+vim.keymap.set('n', '<leader>fd', '<cmd>lua require("telescope.builtin").find_files()<CR>')
+vim.keymap.set('n', '<leader>ff', grep_directory)
+-- vim.keymap.set('n', 'fs', grep_string)
 vim.keymap.set('n', 'gr', '<cmd>lua require("telescope.builtin").lsp_references()<CR>')
-vim.keymap.set('n', 'fb', '<cmd>lua require("telescope.builtin").buffers()<CR>')
-vim.keymap.set('n', 'fh', '<cmd>lua require("telescope.builtin").help_tags()<CR>')
+-- vim.keymap.set('n', '<leader>fb', '<cmd>lua require("telescope.builtin").buffers()<CR>')
+vim.keymap.set('n', '<leader>fh', '<cmd>lua require("telescope.builtin").help_tags()<CR>')
 
