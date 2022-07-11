@@ -1,4 +1,8 @@
-local gps = require('nvim-gps')
+local gps_status_ok, gps = pcall(require, 'nvim-gps')
+if not gps_status_ok then
+  return
+end
+
 gps.setup()
 
 gps_component = {gps.get_location, cond = gps.is_available}
@@ -12,6 +16,11 @@ local sections = {
 	lualine_z = {'location'}
 }
 
-require('lualine').setup({
+local lualine_status_ok, lualine = pcall(require, 'lualine')
+if not lualine_status_ok then
+  return
+end
+
+lualine.setup({
 	sections = sections,
 })
