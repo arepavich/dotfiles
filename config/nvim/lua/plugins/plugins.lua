@@ -83,7 +83,6 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate"
   })
-  use("SmiteshP/nvim-gps")
 
   -- Statusline
   use("nvim-lualine/lualine.nvim")
@@ -96,6 +95,12 @@ return packer.startup(function(use)
       {"MunifTanjim/nui.nvim"},
       {"s1n7ax/nvim-window-picker"}
     }
+  })
+
+  -- Sessions
+  use({
+    "olimorris/persisted.nvim",
+    requires = {{"nvim-telescope/telescope.nvim"}}
   })
 
   -- LSP
