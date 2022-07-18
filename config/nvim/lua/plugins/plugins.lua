@@ -85,8 +85,9 @@ return packer.startup(function(use)
     run = ":TSUpdate"
   })
 
-  -- Statusline
+  -- Statusline / Winbar
   use("nvim-lualine/lualine.nvim")
+  use("b0o/incline.nvim")
 
   -- Neotree
   use({
@@ -97,6 +98,8 @@ return packer.startup(function(use)
       {"s1n7ax/nvim-window-picker"}
     }
   })
+
+  use("stevearc/aerial.nvim")
 
   use("ahmedkhalf/project.nvim")
 
