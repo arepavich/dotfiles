@@ -97,6 +97,8 @@ return packer.startup(function(use)
     }
   })
 
+  use("ahmedkhalf/project.nvim")
+
   -- Sessions
   use({
     "olimorris/persisted.nvim",

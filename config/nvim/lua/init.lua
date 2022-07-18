@@ -11,7 +11,7 @@ vim.opt.secure = true
 
 
 
-require("plugins")
+require('plugins')
 require('keybinds')
 -- require('plugins.dependencies')
 
