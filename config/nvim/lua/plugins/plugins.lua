@@ -113,6 +113,7 @@ return packer.startup(function(use)
   use("neovim/nvim-lspconfig")
   use("kylechui/nvim-surround")
   use("jose-elias-alvarez/null-ls.nvim")
+  use("folke/lua-dev.nvim")
 
 
   -- Language-specific Improvements
