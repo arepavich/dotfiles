@@ -3,7 +3,7 @@ if not snip_status_ok then
   return
 end
 
-require('luasnip.loaders.from_lua').load({paths = "~/snippets"})
+require('luasnip.loaders.from_lua').load({paths = "~/.config/nvim/snippets"})
 
 luasnip.config.set_config({
   history = true,
