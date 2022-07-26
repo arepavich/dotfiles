@@ -125,6 +125,11 @@ return packer.startup(function(use)
   use({
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
+    config = function()
+      vim.api.nvim_set_var("mkdp_ip", "127.0.0.1")
+      vim.api.nvim_set_var("mkdp_port", 9009)
+      vim.api.nvim_set_var("mkdp_echo_preview_url", true)
+    end
   })
 
   -- Automatically set up your configuration after cloning packer.nvim

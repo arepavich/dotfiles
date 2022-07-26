@@ -27,7 +27,7 @@ configs.setup {
 		},
 	},
 	indent = {
-		enable = true,
+		enable = false,
 		disable = { "python", "lua" }
 	},
 }

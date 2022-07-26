@@ -18,8 +18,8 @@ cmp.setup({
 		completion = cmp.config.window.bordered()
 	},
 	mapping = cmp.mapping.preset.insert({
-		['<leader><C-j>'] = cmp.mapping.scroll_docs(-4),
-		['<leader><C-k>'] = cmp.mapping.scroll_docs(4),
+		['<C-u>'] = cmp.mapping.scroll_docs(-4),
+		['<C-d>'] = cmp.mapping.scroll_docs(4),
 		['<leader><C-Space>'] = cmp.mapping.complete(),
 		['<C-j>'] = cmp.mapping(function(fallback)
 			if cmp.visible() then
