@@ -13,10 +13,10 @@ vim.keymap.set('n', '\\', '<cmd>Neotree reveal<CR>')
 vim.keymap.set('n', '<leader>fb', '<cmd>Neotree source=buffers position=float<CR>')
 vim.keymap.set('n', '<leader>fg', '<cmd>Neotree source=git_status position=left<CR>')
 
-vim.keymap.set('v', '<leader>o', '<cmd>OSCYank<CR>')
 
 require('keybinds.nvim-lsp')
 require('keybinds.telescope')
+require('keybinds.osc52')
 -- require('keybinds.neotest')
 
 vim.keymap.set('n', '<leader><C-r>', '<cmd>lua reload_nvim_conf()<CR>')

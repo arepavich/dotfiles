@@ -46,7 +46,7 @@ return packer.startup(function(use)
   use("numToStr/Comment.nvim") -- Easy commenting
   use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
   use("lukas-reineke/indent-blankline.nvim") -- Guide lines for indented blocks
-  use("ojroques/vim-oscyank") -- Yank directly from a buffer in a remote SSH session to the local clipboard
+  use("ojroques/nvim-osc52") -- Yank directly from a buffer in a remote SSH session to the local clipboard
 
   -- Colorschemes
   use("rebelot/kanagawa.nvim")
