@@ -43,7 +43,6 @@ packer.init({
 return packer.startup(function(use)
   use("wbthomason/packer.nvim") -- Have packer manage itself
   use("nvim-lua/plenary.nvim") -- Utility library which is a dependency of many plugins
-  use("numToStr/Comment.nvim") -- Easy commenting
   use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
   use("lukas-reineke/indent-blankline.nvim") -- Guide lines for indented blocks
   use("ojroques/nvim-osc52") -- Yank directly from a buffer in a remote SSH session to the local clipboard
@@ -59,6 +58,10 @@ return packer.startup(function(use)
   use("hrsh7th/nvim-cmp")
   use("hrsh7th/cmp-nvim-lsp")
   use("saadparwaiz1/cmp_luasnip")
+
+  -- Comments
+  use("numToStr/Comment.nvim") -- Easy commenting
+  use("folke/todo-comments.nvim") -- Find TODOs
 
   -- snippets
   use("L3MON4D3/LuaSnip")
