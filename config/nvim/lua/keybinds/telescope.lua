@@ -36,4 +36,5 @@ vim.keymap.set('n', '<leader>ff', grep_directory)
 vim.keymap.set('n', 'gr', '<cmd>lua require("telescope.builtin").lsp_references()<CR>')
 -- vim.keymap.set('n', '<leader>fb', '<cmd>lua require("telescope.builtin").buffers()<CR>')
 vim.keymap.set('n', '<leader>fh', '<cmd>lua require("telescope.builtin").help_tags()<CR>')
+vim.keymap.set('n', '<leader>ft', '<cmd>TodoTelescope<CR>')
 

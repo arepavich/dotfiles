@@ -21,20 +21,6 @@ cmp.setup({
 		['<C-u>'] = cmp.mapping.scroll_docs(-4),
 		['<C-d>'] = cmp.mapping.scroll_docs(4),
 		['<leader><C-Space>'] = cmp.mapping.complete(),
-		['<C-j>'] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_next_item()
-			else
-				fallback()
-			end
-		end, {"i", "s", "c"}),
-		['<C-k>'] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_prev_item()
-			else
-				fallback()
-			end
-		end, {"i", "s", "c"}),
 		['<C-e>'] = cmp.mapping.abort(),
 		['<CR>'] = cmp.mapping.confirm({ select = false }),
 		["<Tab>"] = cmp.mapping(function(fallback)
@@ -46,10 +32,19 @@ cmp.setup({
 				else
 					cmp.confirm()
 				end
+      elseif luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
 			else
 				fallback()
 			end
-		end, {"i", "s", "c"})
+		end, {"i", "s", "c"}),
+    ["<S-Tab>"] = cmp.mapping(function(fallback)
+      if luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
+      end
+    end, {"i", "s"}),
 	}),
 	sources = cmp.config.sources({
 		{ name = 'nvim_lsp' },
