@@ -3,4 +3,6 @@ if not status_ok then
   return
 end
 
-project.setup()
+project.setup({
+  manual_mode = true,
+})
