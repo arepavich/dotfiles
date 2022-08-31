@@ -63,7 +63,7 @@ local todo_snippet_nodes = function(aliases, opts)
     table.insert(sigmark_nodes, mark())
   end
   -- format them into the actual snippet
-  local comment_node = fmta('<> <>: <> <> <><>', {
+  local comment_node = fmta('<> <>: <> <><><>', {
     f(function ()
       return get_cstring(opts.ctype)[1] -- get <comment-string[1]>
     end),
@@ -71,7 +71,12 @@ local todo_snippet_nodes = function(aliases, opts)
     i(3), -- {comment-text}
     c(2, sigmark_nodes), -- [comment-mark]
     f(function()
-      return get_cstring(opts.ctype)[2] -- get <comment-string[2]>
+      local cstring2 = get_cstring(opts.ctype)[2]
+      if string.len(cstring2) > 0 then
+        return " " .. cstring2 -- get <comment-string[2]>
+      else
+        return ""
+      end
     end),
     i(0),
   })
