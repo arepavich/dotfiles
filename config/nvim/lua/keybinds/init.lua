@@ -15,6 +15,11 @@ vim.keymap.set('n', '<leader>fg', '<cmd>Neotree source=git_status position=left<
 
 vim.keymap.set('n', '<leader>dd', function() vim.diagnostic.goto_prev() end, {silent=true})
 
+vim.keymap.set('n', '<A-j>', ":m .+1<CR>==", {silent=true})
+vim.keymap.set('n', '<A-k>', ":m .-2<CR>==", {silent=true})
+vim.keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv", {silent=true})
+vim.keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv", {silent=true})
+
 
 require('keybinds.nvim-lsp')
 require('keybinds.telescope')

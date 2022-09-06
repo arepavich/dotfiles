@@ -125,7 +125,7 @@ return packer.startup(function(use)
   -- Language-specific Improvements
   -- Python Improvements
   use("Vimjas/vim-python-pep8-indent")
-  use("python-rope/ropevim")
+  use({"python-rope/ropevim", ft = "python"})
 
   -- Markdown support
   use({
