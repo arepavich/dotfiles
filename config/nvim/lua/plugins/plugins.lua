@@ -50,6 +50,7 @@ return packer.startup(function(use)
 
   -- Colorschemes
   use("rebelot/kanagawa.nvim")
+  use("folke/tokyonight.nvim")
 
   -- Icons
   use("kyazdani42/nvim-web-devicons")
@@ -119,7 +120,7 @@ return packer.startup(function(use)
   use("neovim/nvim-lspconfig")
   use("kylechui/nvim-surround")
   use("jose-elias-alvarez/null-ls.nvim")
-  use("folke/lua-dev.nvim")
+  use("folke/neodev.nvim")
 
 
   -- Language-specific Improvements

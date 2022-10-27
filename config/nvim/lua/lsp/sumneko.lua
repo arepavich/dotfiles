@@ -1,5 +1,5 @@
-local luadev = require('lua-dev').setup({
+local neodev = require('neodev').setup({
 	library = { plugins = { "neotest" }, types = true },
 })
 
-require('lspconfig').sumneko_lua.setup(luadev)
+require('lspconfig').sumneko_lua.setup(neodev)

@@ -14,4 +14,7 @@ end
 
 lualine.setup({
 	sections = sections,
+  options = {
+    theme = "tokyonight"
+  }
 })

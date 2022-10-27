@@ -15,6 +15,7 @@ require('keybinds')
 -- require('plugins.dependencies')
 
 --require('colors.catppuccin')
-vim.cmd[[colorscheme kanagawa]]
+require('colors.tokyonight')
+vim.cmd[[colorscheme tokyonight]]
 require('lsp')
 
