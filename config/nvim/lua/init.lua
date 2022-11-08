@@ -19,3 +19,12 @@ require('colors.tokyonight')
 vim.cmd[[colorscheme tokyonight]]
 require('lsp')
 
+local popui_input_status_ok, popui_input = pcall(require, 'popui.input-overrider')
+if popui_input_status_ok then
+  vim.ui.input = popui_input
+end
+
+local popui_ui_status_ok, popui_ui = pcall(require, 'popui.ui-overrider')
+if popui_ui_status_ok then
+  vim.ui.select = popui_ui
+end

@@ -47,6 +47,7 @@ return packer.startup(function(use)
   use("lukas-reineke/indent-blankline.nvim") -- Guide lines for indented blocks
   use("ojroques/nvim-osc52") -- Yank directly from a buffer in a remote SSH session to the local clipboard
   use({"folke/which-key.nvim"})
+  use({"hood/popui.nvim"}) -- Tools for floating inputs/menus
 
   -- Colorschemes
   use("rebelot/kanagawa.nvim")
