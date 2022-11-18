@@ -1,4 +1,4 @@
-vim.g.mapleader=","
+vim.g.mapleader=" "
 
 vim.keymap.set('n', 'ZB', '<Cmd>bprev|bd#<CR>', {silent=true})
 vim.keymap.set('n', 'gt', '<Cmd>bn<CR>', {silent=true})

@@ -72,6 +72,9 @@ return packer.startup(function(use)
   use("lewis6991/gitsigns.nvim")
   use("tpope/vim-fugitive")
 
+  -- GitHub
+  use("pwntester/octo.nvim")
+
   -- Motion
   use("ggandor/leap.nvim")
   use("tpope/vim-repeat")
