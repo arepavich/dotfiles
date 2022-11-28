@@ -4,6 +4,7 @@ if not status_ok then
 end
 
 aerial.setup({
+  backends = { "lsp", "treesitter", "markdown", "man"},
   on_attach = function(bufnr)
     -- Toggle the aerial window with <leader>a
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>go', '<cmd>AerialToggle!<CR>', {})
@@ -14,5 +15,5 @@ aerial.setup({
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '[[', '<cmd>AerialPrevUp<CR>', {})
     vim.api.nvim_buf_set_keymap(bufnr, 'n', ']]', '<cmd>AerialNextUp<CR>', {})
   end,
-  manage_folds = true
-}) 
+  manage_folds = true,
+})
