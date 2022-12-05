@@ -1,2 +1,2 @@
 ZSH_THEME="gnzh"
-plugins=(git vi-mode)
+plugins=(git vi-mode poetry)
