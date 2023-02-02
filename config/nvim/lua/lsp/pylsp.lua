@@ -6,7 +6,7 @@ require('lspconfig').pylsp.setup {
       plugins = {
         pycodestyle = {
           maxLineLength = 120
-        }
+        },
       }
     }
   }

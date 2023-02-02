@@ -13,12 +13,13 @@ vim.opt.mouse = ""
 
 require('plugins')
 require('keybinds')
+require('autocommands')
 -- require('plugins.dependencies')
 
 --require('colors.catppuccin')
-require('colors.tokyonight')
-vim.cmd[[colorscheme tokyonight]]
-require('lsp')
+--require('colors.tokyonight')
+--vim.cmd[[colorscheme tokyonight]]
+--require('lsp')
 
 local popui_input_status_ok, popui_input = pcall(require, 'popui.input-overrider')
 if popui_input_status_ok then
