@@ -67,7 +67,7 @@ require("lazy").setup({
 
     -- Icons
     {
-      "kyazdani42/nvim-web-devicons",
+      "nvim-tree/nvim-web-devicons",
       lazy = true,
       config = {
         -- your personal icons can go here (to override)
@@ -109,7 +109,7 @@ require("lazy").setup({
       "nvim-neo-tree/neo-tree.nvim",
       dependencies = {
         "nvim-lua/plenary.nvim",
-        "kyazdani42/nvim-web-devicons",
+        "nvim-tree/nvim-web-devicons",
         "MunifTanjim/nui.nvim",
         "s1n7ax/nvim-window-picker",
       },
@@ -146,7 +146,7 @@ require("lazy").setup({
     {
       "nvim-lualine/lualine.nvim",
       dependencies = {
-        "kyazdani42/nvim-web-devicons",
+        "nvim-tree/nvim-web-devicons",
       },
       config = function()
         require("plugins.lualine")
@@ -164,7 +164,7 @@ require("lazy").setup({
       dependencies = {
         "nvim-lua/plenary.nvim",
         "nvim-telescope/telescope.nvim",
-        "kyazdani42/nvim-web-devicons",
+        "nvim-tree/nvim-web-devicons",
       },
       config = true
     },
