@@ -224,6 +224,9 @@ require("lazy").setup({
     -- Comments
     { "numToStr/Comment.nvim", config = true}, -- Easy commenting
     { "folke/todo-comments.nvim" }, -- Find TODOs
+
+    -- Python-specific improvements
+    { "Vimjas/vim-python-pep8-indent" },
   }
 })
 
