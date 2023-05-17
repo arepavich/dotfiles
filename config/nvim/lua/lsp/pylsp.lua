@@ -7,9 +7,9 @@ require('lspconfig').pylsp.setup {
         pycodestyle = {
           maxLineLength = 120
         },
-        rope_autoimport = {
-          enabled = true,
-        },
+        -- rope_autoimport = {
+        --   enabled = true,
+        -- },
       }
     }
   }
