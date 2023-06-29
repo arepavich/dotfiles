@@ -152,7 +152,12 @@ require("lazy").setup({
         require("plugins.lualine")
       end
     },
-    { "b0o/incline.nvim", config = true},
+    {
+      "b0o/incline.nvim",
+      config = function()
+        require("plugins.incline")
+      end
+    },
 
     -- Git
     { "lewis6991/gitsigns.nvim", config = true},
@@ -227,6 +232,17 @@ require("lazy").setup({
 
     -- Python-specific improvements
     { "Vimjas/vim-python-pep8-indent" },
+
+    -- Markdown support
+    {
+      "iamcco/markdown-preview.nvim",
+      build = function() vim.fn["mkdp#util#install"]() end,
+      config = function()
+        vim.api.nvim_set_var("mkdp_ip", "127.0.0.1")
+        vim.api.nvim_set_var("mkdp_port", 9009)
+        vim.api.nvim_set_var("mkdp_echo_preview_url", true)
+      end
+    }
   }
 })
 

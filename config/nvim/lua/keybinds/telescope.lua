@@ -27,4 +27,5 @@ vim.keymap.set('n', 'gr', '<cmd>lua require("telescope.builtin").lsp_references(
 -- vim.keymap.set('n', '<leader>fb', '<cmd>lua require("telescope.builtin").buffers()<CR>')
 vim.keymap.set('n', '<leader>fh', '<cmd>lua require("telescope.builtin").help_tags()<CR>')
 vim.keymap.set('n', '<leader>ft', '<cmd>TodoTelescope<CR>')
+vim.keymap.set('n', '<leader>fr', '<cmd>lua require("telescope.builtin").resume()<CR>')
 
