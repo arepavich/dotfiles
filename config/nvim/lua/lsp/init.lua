@@ -5,5 +5,6 @@ require('lsp.sqlls')
 require('lsp.tsserver')
 require('lsp.terraformls')
 require('lsp.gopls')
+require('lsp.rust_analyzer')
 
-require('lsp.sumneko')
+-- require('lsp.sumneko')
