@@ -30,7 +30,7 @@ require("lazy").setup({
     { "ojroques/nvim-osc52", config = true},
     {
       "kylechui/nvim-surround",
-      config = {
+      opts = {
         keymaps = {
           visual = "as"
         }
@@ -69,7 +69,7 @@ require("lazy").setup({
     {
       "nvim-tree/nvim-web-devicons",
       lazy = true,
-      config = {
+      opts = {
         -- your personal icons can go here (to override)
         -- you can specify color or cterm_color instead of specifying both of them
         -- DevIcon will be appended to `name`
@@ -121,7 +121,7 @@ require("lazy").setup({
     -- File Structure Tree
     {
       "stevearc/aerial.nvim",
-      config = {
+      opts = {
         backends = { "lsp", "treesitter", "markdown", "man"},
         on_attach = function(bufnr)
           local aerial = require('aerial')
@@ -214,17 +214,33 @@ require("lazy").setup({
     },
 
     -- Motion
-    {
-      "ggandor/leap.nvim",
-      config = function()
-        local leap = require("leap")
-        leap.set_default_keymaps()
-      end
-    },
     { "tpope/vim-repeat" },
 
     -- Telescope
-    { "nvim-telescope/telescope.nvim" },
+    {
+      "nvim-telescope/telescope.nvim",
+      dependencies = { 'nvim-lua/plenary.nvim' },
+      config = function()
+        local telescope = require('telescope')
+        telescope.setup({
+          pickers = {
+            find_files = {
+              follow = true
+            }
+          },
+          extensions = {
+            fzf = {
+              fuzzy = true,
+              override_generic_sorter = true,
+              override_file_sorter = true,
+              case_mode = "smart_case",
+            }
+          }
+        })
+        telescope.load_extension('fzf')
+      end
+    },
+    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
 
     -- Comments
     { "numToStr/Comment.nvim", config = true}, -- Easy commenting
@@ -242,7 +258,7 @@ require("lazy").setup({
         vim.api.nvim_set_var("mkdp_port", 9009)
         vim.api.nvim_set_var("mkdp_echo_preview_url", true)
       end
-    }
+    },
   }
 })
 
